@@ -1,0 +1,4 @@
+#Mon Sep 26 19:40:17 CEST 2022
+base.0=/Users/carv367912/Git/Bloc Example/list_cubit/list_app/build/app/intermediates/dex/debug/mergeDexDebug/classes.dex
+renamed.0=classes.dex
+path.0=classes.dex
