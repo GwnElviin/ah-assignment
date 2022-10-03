@@ -50,63 +50,65 @@ class HomeDetailPage extends StatelessWidget {
         backgroundColor: Color.fromRGBO(58, 66, 86, 1.0),
         title: Text('${state.artDetailsObject.title}'),
       ),
-      body: Center(
-          child: Padding(
-        padding: const EdgeInsets.all(16.0),
-        child: Column(
-          children: [
-            const SizedBox(
-              height: 24,
-            ),
-            Container(
-              height: 200,
-              width: 200,
-              decoration: BoxDecoration(
-                boxShadow: [
-                  BoxShadow(
-                    color: Colors.grey.withOpacity(0.5),
-                    spreadRadius: 8,
-                    blurRadius: 7,
-                    offset: const Offset(0, 3),
-                  ),
-                ],
+      body: SingleChildScrollView(
+        child: Center(
+            child: Padding(
+          padding: const EdgeInsets.all(16.0),
+          child: Column(
+            children: [
+              const SizedBox(
+                height: 24,
               ),
-              child: Image.network(
-                  fit: BoxFit.cover, '${state.artDetailsObject.image}'),
-            ),
-            const SizedBox(
-              height: 24,
-            ),
-            Text(
-                style: const TextStyle(
-                    fontWeight: FontWeight.bold,
-                    fontSize: 24,
-                    color: Color.fromARGB(255, 233, 190, 34)),
-                '${state.artDetailsObject.title}'),
-            const SizedBox(
-              height: 24,
-            ),
-            Text(
-                style: const TextStyle(
-                  fontStyle: FontStyle.italic,
-                  fontWeight: FontWeight.w500,
-                  fontSize: 14,
+              Container(
+                height: 200,
+                width: 200,
+                decoration: BoxDecoration(
+                  boxShadow: [
+                    BoxShadow(
+                      color: Colors.grey.withOpacity(0.5),
+                      spreadRadius: 8,
+                      blurRadius: 7,
+                      offset: const Offset(0, 3),
+                    ),
+                  ],
                 ),
-                '${state.artDetailsObject.labelDesc} | ${state.artDetailsObject.type}'),
-            const SizedBox(
-              height: 16,
-            ),
-            Text('${state.artDetailsObject.description}'),
-            ElevatedButton(
-              onPressed: () {
-                // Navigate back to first route when tapped.
-                Navigator.pop(context);
-              },
-              child: const Text('Go back'),
-            ),
-          ],
-        ),
-      )),
+                child: Image.network(
+                    fit: BoxFit.cover, '${state.artDetailsObject.image}'),
+              ),
+              const SizedBox(
+                height: 24,
+              ),
+              Text(
+                  style: const TextStyle(
+                      fontWeight: FontWeight.bold,
+                      fontSize: 24,
+                      color: Color.fromARGB(255, 233, 190, 34)),
+                  '${state.artDetailsObject.title}'),
+              const SizedBox(
+                height: 24,
+              ),
+              Text(
+                  style: const TextStyle(
+                    fontStyle: FontStyle.italic,
+                    fontWeight: FontWeight.w500,
+                    fontSize: 14,
+                  ),
+                  '${state.artDetailsObject.labelDesc} | ${state.artDetailsObject.type}'),
+              const SizedBox(
+                height: 16,
+              ),
+              Text('${state.artDetailsObject.description}'),
+              ElevatedButton(
+                onPressed: () {
+                  // Navigate back to first route when tapped.
+                  Navigator.pop(context);
+                },
+                child: const Text('Go back'),
+              ),
+            ],
+          ),
+        )),
+      ),
     );
   }
 }

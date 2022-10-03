@@ -59,6 +59,9 @@ class _ArtListWidgetState extends State<ArtListWidget> {
           ),
         ),
         SizedBox(
+          height: 8,
+        ),
+        SizedBox(
           height: MediaQuery.of(context).size.height - 120,
           child: GroupedListView<ArtListItem, String>(
             controller: _controller,

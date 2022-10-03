@@ -88,67 +88,69 @@ class AllArtListItem extends StatelessWidget {
           child: Padding(
             padding:
                 const EdgeInsets.only(top: 24, bottom: 8, left: 8, right: 8),
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.start,
-              children: <Widget>[
-                Container(
-                    alignment: Alignment.topLeft,
-                    height: 50,
-                    child: InkWell(
-                      onTap: () => Navigator.pop(context),
-                      child: const Align(
-                        alignment: Alignment.topLeft,
-                        child: Icon(
-                          Icons.chevron_left,
-                          size: 40,
-                          color: Colors.grey,
-                        ),
-                      ),
-                    )),
-                Container(
-                  height: 200,
-                  width: 200,
-                  color: Colors.black,
-                  child:
-                      Image.network(fit: BoxFit.cover, '${artObjects.image}'),
-                ),
-                const SizedBox(
-                  height: 24,
-                ),
-                Text(
-                  '${artObjects.title}',
-                  style: TextStyle(
-                    fontSize: 24,
-                    color: Colors.white,
-                    fontWeight: FontWeight.bold,
-                  ),
-                ),
-                const SizedBox(
-                  height: 8,
-                ),
-                Text(
-                  overflow: TextOverflow.ellipsis,
-                  "${artObjects.longTitle}",
-                  style: TextStyle(
-                    fontSize: 16,
-                    color: Colors.white,
-                    fontWeight: FontWeight.w500,
-                  ),
-                ),
-                const SizedBox(
-                  height: 8,
-                ),
-                ElevatedButton(
-                    child: const Text('See More'),
-                    onPressed: () => Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) => HomeDetailPage(
-                              postId: artObjects.id,
-                            ),
+            child: SingleChildScrollView(
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.start,
+                children: <Widget>[
+                  Container(
+                      alignment: Alignment.topLeft,
+                      height: 50,
+                      child: InkWell(
+                        onTap: () => Navigator.pop(context),
+                        child: const Align(
+                          alignment: Alignment.topLeft,
+                          child: Icon(
+                            Icons.chevron_left,
+                            size: 40,
+                            color: Colors.grey,
                           ),
-                        )),
-              ],
+                        ),
+                      )),
+                  Container(
+                    height: 200,
+                    width: 200,
+                    color: Colors.black,
+                    child:
+                        Image.network(fit: BoxFit.cover, '${artObjects.image}'),
+                  ),
+                  const SizedBox(
+                    height: 24,
+                  ),
+                  Text(
+                    '${artObjects.title}',
+                    style: TextStyle(
+                      fontSize: 20,
+                      color: Colors.white,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                  const SizedBox(
+                    height: 8,
+                  ),
+                  Text(
+                    overflow: TextOverflow.ellipsis,
+                    "${artObjects.longTitle}",
+                    style: TextStyle(
+                      fontSize: 15,
+                      color: Colors.white,
+                      fontWeight: FontWeight.w300,
+                    ),
+                  ),
+                  const SizedBox(
+                    height: 8,
+                  ),
+                  ElevatedButton(
+                      child: const Text('See More'),
+                      onPressed: () => Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => HomeDetailPage(
+                                postId: artObjects.id,
+                              ),
+                            ),
+                          )),
+                ],
+              ),
             ),
           ),
         );
