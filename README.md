@@ -1,8 +1,11 @@
 # list_app
 
-A new Flutter project.
+AH Flutter Assignment Elvin Carvalho
+
+![Alt Text](https://github.com/GwnElviin/ah-assignment/blob/main/gif/ah-Assignment-gif.gif)
 
 ## Getting Started
+
 
 This project is a starting point for a Flutter application.
 
